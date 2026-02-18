@@ -1,0 +1,707 @@
+# Instincts generated from https://github.com/kackey0-1/spring-petclinic
+# Generated: 2026-02-18T02:12:40.796Z
+# Version: 2.0
+
+---
+id: spring-petclinic-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Commit Length
+
+## Action
+
+Keep commit messages concise (under 50 characters)
+
+## Evidence
+
+- Average commit message length: 36 chars
+- Based on 200 commits
+
+---
+id: spring-petclinic-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: spring-petclinic-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: spring-petclinic-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: spring-petclinic-workflow-test-driven-development
+trigger: "when adding new functionality"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Workflow Test Driven Development
+
+## Action
+
+Follow the test-driven-development workflow:
+1. Write failing test
+2. Implement code to pass test
+3. Refactor if needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: **/*.test.*, **/*.spec.*, src/**/*
+
+---
+id: spring-petclinic-workflow-refactoring
+trigger: "when refactoring code"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Workflow Refactoring
+
+## Action
+
+Follow the refactoring workflow:
+1. Ensure tests pass before refactor
+2. Refactor code structure
+3. Verify tests still pass
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: src/**/*
+
+---
+id: spring-petclinic-workflow-spring-boot-version-upgrade
+trigger: "when doing spring boot version upgrade"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Workflow Spring Boot Version Upgrade
+
+## Action
+
+Follow the spring-boot-version-upgrade workflow:
+1. Update build.gradle version
+2. Update pom.xml version
+3. Update test files for compatibility
+4. Update configuration if needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: build.gradle, pom.xml, src/test/java/**/*Tests.java
+
+---
+id: spring-petclinic-workflow-gradle-version-upgrade
+trigger: "when doing gradle version upgrade"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Workflow Gradle Version Upgrade
+
+## Action
+
+Follow the gradle-version-upgrade workflow:
+1. Update gradle-wrapper.properties
+2. Update gradle-wrapper.jar
+3. Update gradlew scripts
+4. Update build.gradle if needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: gradle/wrapper/gradle-wrapper.properties, gradle/wrapper/gradle-wrapper.jar, gradlew
+
+---
+id: spring-petclinic-workflow-maven-version-upgrade
+trigger: "when doing maven version upgrade"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Workflow Maven Version Upgrade
+
+## Action
+
+Follow the maven-version-upgrade workflow:
+1. Update maven-wrapper.properties
+2. Update mvnw scripts if needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: .mvn/wrapper/maven-wrapper.properties, mvnw, mvnw.cmd
+
+---
+id: spring-petclinic-workflow-readme-documentation-updates
+trigger: "when doing readme documentation updates"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Workflow Readme Documentation Updates
+
+## Action
+
+Follow the readme-documentation-updates workflow:
+1. Edit README.md content
+2. Fix version mismatches
+3. Clarify usage instructions
+4. Polish formatting
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~6x per month
+- Files: README.md
+
+---
+id: spring-petclinic-workflow-database-version-upgrade
+trigger: "when doing database version upgrade"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Workflow Database Version Upgrade
+
+## Action
+
+Follow the database-version-upgrade workflow:
+1. Update docker-compose.yml
+2. Update k8s/db.yml
+3. Update test configurations
+4. Update README with new versions
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: docker-compose.yml, k8s/db.yml, src/test/java/**/My*IntegrationTests.java
+
+---
+id: spring-petclinic-workflow-internationalization-enhancement
+trigger: "when doing internationalization enhancement"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Workflow Internationalization Enhancement
+
+## Action
+
+Follow the internationalization-enhancement workflow:
+1. Update messages.properties
+2. Update all language-specific message files
+3. Update HTML templates with message keys
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: src/main/resources/messages/messages*.properties, src/main/resources/templates/**/*.html
+
+---
+id: spring-petclinic-workflow-copyright-year-update
+trigger: "when doing copyright year update"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Workflow Copyright Year Update
+
+## Action
+
+Follow the copyright-year-update workflow:
+1. Update copyright header in all Java source files
+2. Update copyright in test files
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: src/main/java/**/*.java, src/test/java/**/*.java
+
+---
+id: spring-petclinic-workflow-build-configuration-cleanup
+trigger: "when doing build configuration cleanup"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Workflow Build Configuration Cleanup
+
+## Action
+
+Follow the build-configuration-cleanup workflow:
+1. Update build.gradle
+2. Update pom.xml
+3. Remove outdated configurations
+4. Polish settings
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: build.gradle, pom.xml
+
+---
+id: spring-petclinic-java-class-naming
+trigger: "When creating a new Java class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Java Class Naming
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Standard Java convention observed in src/main/java/**/*.java
+- Consistent PascalCase in existing codebase
+
+---
+id: spring-petclinic-method-naming
+trigger: "When creating a new Java method"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Method Naming
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Standard Java convention observed in src/main/java/**/*.java
+- Consistent camelCase in existing methods
+
+---
+id: spring-petclinic-constants-naming
+trigger: "When declaring a Java constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Constants Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE naming convention
+
+## Evidence
+
+- Standard Java convention for constants
+- Consistent SCREAMING_SNAKE_CASE in existing code
+
+---
+id: spring-petclinic-file-naming
+trigger: "When creating a new Java file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic File Naming
+
+## Action
+
+Use camelCase for file names
+
+## Evidence
+
+- camelCase pattern observed in existing file structure
+- Standard Java file naming convention
+
+---
+id: spring-petclinic-test-location
+trigger: "When writing a new test file"
+confidence: 0.95
+domain: testing
+source: repo-analysis
+source_repo: kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Test Location
+
+## Action
+
+Place tests in src/test directory structure mirroring src/main
+
+## Evidence
+
+- Separate test location pattern observed
+- Standard Maven/Gradle project structure
+
+---
+id: spring-petclinic-test-naming
+trigger: "When naming test classes"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Test Naming
+
+## Action
+
+Use *Tests.java suffix for test class names
+
+## Evidence
+
+- Pattern in src/test/java/**/*Tests.java
+- Spring Boot testing convention
+
+---
+id: spring-petclinic-test-driven-development
+trigger: "When implementing new functionality"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Test Driven Development
+
+## Action
+
+Write failing test first, then implement code to pass test
+
+## Evidence
+
+- test-driven-development workflow with frequency 3
+- Commit sequence shows test-first pattern
+
+---
+id: spring-petclinic-commit-prefix
+trigger: "When making a commit"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Commit Prefix
+
+## Action
+
+Use prefixes like 'test:', 'feat:', 'fix:', 'docs:', 'chore:'
+
+## Evidence
+
+- Prefixes 'test' and 'feat' observed
+- Examples show conventional commit format usage
+
+---
+id: spring-petclinic-commit-length
+trigger: "When writing commit messages"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Commit Length
+
+## Action
+
+Keep commit messages around 36 characters average length
+
+## Evidence
+
+- Average length of 36 characters observed
+- Examples show concise commit messages
+
+---
+id: spring-petclinic-spring-boot-upgrade
+trigger: "When upgrading Spring Boot version"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Spring Boot Upgrade
+
+## Action
+
+Update both build.gradle and pom.xml, then update test files for compatibility
+
+## Evidence
+
+- spring-boot-version-upgrade workflow with frequency 4
+- Consistent pattern in build files
+
+---
+id: spring-petclinic-gradle-upgrade
+trigger: "When upgrading Gradle version"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Gradle Upgrade
+
+## Action
+
+Update gradle-wrapper.properties first, then gradle-wrapper.jar and gradlew scripts
+
+## Evidence
+
+- gradle-version-upgrade workflow with frequency 3
+- Standard Gradle wrapper update pattern
+
+---
+id: spring-petclinic-maven-upgrade
+trigger: "When upgrading Maven version"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Maven Upgrade
+
+## Action
+
+Update maven-wrapper.properties and mvnw scripts
+
+## Evidence
+
+- maven-version-upgrade workflow with frequency 2
+- Maven wrapper update pattern
+
+---
+id: spring-petclinic-readme-updates
+trigger: "When updating project documentation"
+confidence: 0.88
+domain: workflow
+source: repo-analysis
+source_repo: kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Readme Updates
+
+## Action
+
+Edit README.md content, fix version mismatches, and clarify usage instructions
+
+## Evidence
+
+- readme-documentation-updates workflow with frequency 6
+- High maintenance activity on README.md
+
+---
+id: spring-petclinic-database-upgrade
+trigger: "When upgrading database versions"
+confidence: 0.82
+domain: workflow
+source: repo-analysis
+source_repo: kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Database Upgrade
+
+## Action
+
+Update docker-compose.yml, k8s/db.yml, and test configurations together
+
+## Evidence
+
+- database-version-upgrade workflow with frequency 2
+- Coordinated database update pattern
+
+---
+id: spring-petclinic-i18n-updates
+trigger: "When adding translatable strings"
+confidence: 0.87
+domain: workflow
+source: repo-analysis
+source_repo: kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic I18n Updates
+
+## Action
+
+Update messages.properties and all language-specific message files simultaneously
+
+## Evidence
+
+- internationalization-enhancement workflow with frequency 2
+- Coordinated i18n file updates
+
+---
+id: spring-petclinic-copyright-update
+trigger: "When new year begins"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Copyright Update
+
+## Action
+
+Update copyright headers in all Java source and test files
+
+## Evidence
+
+- copyright-year-update workflow with frequency 1
+- Annual maintenance pattern
+
+---
+id: spring-petclinic-build-cleanup
+trigger: "When maintaining build configuration"
+confidence: 0.83
+domain: workflow
+source: repo-analysis
+source_repo: kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Build Cleanup
+
+## Action
+
+Update both build.gradle and pom.xml together, removing outdated configurations
+
+## Evidence
+
+- build-configuration-cleanup workflow with frequency 4
+- Coordinated build file maintenance
+
+---
+id: spring-petclinic-refactor-with-tests
+trigger: "When refactoring code"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Refactor With Tests
+
+## Action
+
+Ensure tests pass before refactoring, then verify tests still pass after
+
+## Evidence
+
+- refactoring workflow with frequency 2
+- Test-safe refactoring pattern
+
+---
+id: spring-petclinic-hybrid-module-organization
+trigger: "When organizing project structure"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: kackey0-1/spring-petclinic
+---
+
+# Spring Petclinic Hybrid Module Organization
+
+## Action
+
+Use hybrid module organization with single-package structure
+
+## Evidence
+
+- moduleOrganization: hybrid
+- single-package folder structure pattern
+
